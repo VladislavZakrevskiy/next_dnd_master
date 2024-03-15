@@ -16,8 +16,8 @@ const HeroPage = async ({ searchParams }: { searchParams: { options: string } })
     const gptRes: GPTDescription = JSON.parse(textData || '')
     return (
         <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-2 grid-rows-1 justify-center items-center">
-                {/* <div className="flex justify-center items-center">
+            {/* <div className="grid grid-cols-2 grid-rows-1 justify-center items-center"> */}
+            {/* <div className="flex justify-center items-center">
                     <HeroAvatar
                         num={options.numberimgs}
                         openAi={OpenAiAPI}
@@ -25,8 +25,8 @@ const HeroPage = async ({ searchParams }: { searchParams: { options: string } })
                         heroName={gptRes.name}
                     />
                 </div> */}
-                <HeroMainDes gptDescription={gptRes} />
-            </div>
+            <HeroMainDes gptDescription={gptRes} />
+            {/* </div> */}
             <HeroExtraDesc gptDescription={gptRes} />
         </div>
     )
