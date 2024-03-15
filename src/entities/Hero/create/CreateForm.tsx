@@ -60,6 +60,7 @@ export const CreateForm = () => {
             <Input isRequired name="numberimgs" type="number" label="Number of Imgs (<5)" />
             <Input name="extraPrompt" label="Extra prompt with your specific wishes (optional)" />
 
+            <p>Sorry, i cut image generating now, later return</p>
             <Button color="success" type="submit">
                 Submit
             </Button>
