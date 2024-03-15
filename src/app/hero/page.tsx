@@ -9,6 +9,7 @@ const HeroPage = async ({ searchParams }: { searchParams: { options: string } })
     const OpenAiAPI = new OpenAI()
     const options: createPromptProps = JSON.parse(searchParams.options || '')
     let textData = await OpenAiAPI.generateText(createPrompt(options))
+    console.log(textData)
     if (textData?.startsWith('```json')) {
         textData = textData.substring(7, textData.length - 4)
     }
