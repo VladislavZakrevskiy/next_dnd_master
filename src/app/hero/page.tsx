@@ -18,12 +18,12 @@ const HeroPage = async ({ searchParams }: { searchParams: { options: string } })
         <div className="flex flex-col gap-4">
             <div className="grid grid-cols-2 grid-rows-1 justify-center items-center">
                 <div className="flex justify-center items-center">
-                    {/* <HeroAvatar
+                    <HeroAvatar
                         num={options.numberimgs}
                         openAi={OpenAiAPI}
                         gptResponse={gptRes}
                         heroName={gptRes.name}
-                    /> */}
+                    />
                 </div>
                 <HeroMainDes gptDescription={gptRes} />
             </div>
