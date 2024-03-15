@@ -14,13 +14,16 @@ const HeroPage = async ({ searchParams }: { searchParams: { options: string } })
         textData = textData.substring(7, textData.length - 4)
     }
     const gptRes: GPTDescription = JSON.parse(textData || '')
-    const imageData = await OpenAiAPI.generateImage(gptRes.promptDALLE3, options.numberimgs)
-    console.log(imageData)
     return (
         <div className="flex flex-col gap-4">
             <div className="grid grid-cols-2 grid-rows-1 justify-center items-center">
                 <div className="flex justify-center items-center">
-                    <HeroAvatar imageSrc={imageData || []} heroName={gptRes.name} />
+                    <HeroAvatar
+                        num={options.numberimgs}
+                        openAi={OpenAiAPI}
+                        gptResponse={gptRes}
+                        heroName={gptRes.name}
+                    />
                 </div>
                 <HeroMainDes gptDescription={gptRes} />
             </div>
