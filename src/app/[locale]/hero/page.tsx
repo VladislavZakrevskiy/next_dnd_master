@@ -8,6 +8,8 @@ import { clamp } from '@/shared/lib/Math/minimax'
 import { getTranslations } from 'next-intl/server'
 import { redirect } from '@/navigation'
 
+export const maxDuration = 300
+
 const HeroPage = async ({ searchParams }: { searchParams: { options: string } }) => {
     const t = await getTranslations('hero')
     const OpenAiAPI = new OpenAI()
