@@ -1,3 +1,5 @@
-export { HeroAvatar } from "./ui/HeroAvatar";
-export { HeroExtraDesc } from "./ui/HeroExtraDesc";
-export { HeroMainDes } from "./ui/HeroMainDesc";
+export { HeroAvatar } from './ui/HeroAvatar'
+export { HeroExtraDesc } from './ui/HeroExtraDesc'
+export { HeroMainDes } from './ui/HeroMainDesc'
+export { createPrompt } from './model/lib/createPrompt'
+export type { GPTDescription } from './model/types/gptDescription'

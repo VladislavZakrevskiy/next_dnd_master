@@ -4,5 +4,9 @@ import { OpenAI } from '@/shared/lib/OpenAI/OpenAi'
 import { useState } from 'react'
 
 export default function Home() {
-    return <CreateForm />
+    return (
+        <>
+            <CreateForm />
+        </>
+    )
 }

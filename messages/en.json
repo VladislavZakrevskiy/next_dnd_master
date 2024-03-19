@@ -1,0 +1,71 @@
+{
+    "createHero": {
+        "title": "Create Your Perfect Hero!",
+        "title items": "Items in inventory",
+        "title skills": "Skills",
+        "speciality": "Class",
+        "itemsNumber": "Number of items (<7)",
+        "race": "Race",
+        "skillsNumber": "Number of skills (<7)",
+        "descCharacter": "Description",
+        "extraPrompt": "Extra prompt with your specific wishes ( for example, language )",
+        "itemsCharacter": "Items of inventory",
+        "numberimgs": "Number of Imgs (<5)",
+        "skillsCharacter": "Skills",
+        "storyCharacter": "Story",
+        "advanced": "Advanced settings",
+        "sorry": "Sorry, i cut image generating now, later return",
+        "generate": "Generate hero"
+    },
+    "auth": {
+        "sign in": "Sign in",
+        "sign out": "Sign out"
+    },
+    "hero": {
+        "name": "Name: ",
+        "race": "Race: ",
+        "class": "Class: ",
+        "story": "Story: ",
+        "items": "Item in inventory:",
+        "description": "Description: ",
+        "using": "Using: ",
+        "damage": "Damage: ",
+        "durability": "Durability: ",
+        "skills": "Skills in inventory",
+        "refresh": "Refresh",
+        "print it": "Print it!",
+        "editor": "Editor"
+    },
+    "card": {
+        "card": "Hero Card",
+        "class": "Class",
+        "level": "Level",
+        "exp": "Experience",
+        "race": "Race",
+        "story": "Story",
+        "characterictics": "Characterictics",
+        "characterictic": "Characterictic",
+        "mod": "Modifier",
+        "competency": "Skills",
+        "strength": "Strength",
+        "agility": "Agility",
+        "endurance": "Endurance",
+        "intelligence": "Intelligence",
+        "wisdom": "Wisdom",
+        "charisma": "Charisma",
+        "items": "Item in inventory:",
+        "name": "Name",
+        "desc": "Description",
+        "using": "Using",
+        "damage": "Damage",
+        "durability": "Durability",
+        "scrolls": "Scrolls",
+        "skills": "Skills"
+    },
+
+    "help": {
+        "error": "Error!",
+        "sorry": "Sorry, maybe gpt give error(",
+        "to home": "To Home"
+    }
+}

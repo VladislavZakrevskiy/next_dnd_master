@@ -1,6 +1,8 @@
-import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react'
+import { Card, CardBody, CardHeader, Divider, Input, Textarea } from '@nextui-org/react'
 import { GPTDescription } from '../model/types/gptDescription'
 import { FC } from 'react'
+import { useTranslations } from 'next-intl'
+import { CharTable } from './CharTable'
 
 interface HeroMainDescProps {
     gptDescription: GPTDescription
@@ -8,51 +10,53 @@ interface HeroMainDescProps {
 
 export const HeroMainDes: FC<HeroMainDescProps> = ({ gptDescription }) => {
     const { name, speciality, story, race } = gptDescription
+    const t = useTranslations('hero')
 
     return (
         <div className="flex flex-col gap-4">
+            <CharTable options={gptDescription} />
             <Card>
                 <CardHeader>
                     <p style={{ fontWeight: 'bold' }} className="font-bold text-black">
-                        Name:
+                        {t('name')}
                     </p>
                 </CardHeader>
                 <Divider />
                 <CardBody>
-                    <p className="text-black">{name}</p>
+                    <Input name="name" className="text-black" defaultValue={name} />
                 </CardBody>
             </Card>
             <Card>
                 <CardHeader>
                     <p style={{ fontWeight: 'bold' }} className="font-bold text-black">
-                        Race:
+                        {t('race')}
                     </p>
                 </CardHeader>
                 <Divider />
                 <CardBody>
-                    <p className="text-black">{race}</p>
+                    <Input name="race" className="text-black" defaultValue={race} />
                 </CardBody>
             </Card>
             <Card>
                 <CardHeader>
                     <p style={{ fontWeight: 'bold' }} className="font-bold text-black">
-                        Class:
+                        {t('class')}
                     </p>
                 </CardHeader>
                 <Divider />
                 <CardBody>
-                    <p className="text-black">{speciality}</p>
+                    <Input name="speciality" defaultValue={speciality} className="text-black" />
                 </CardBody>
             </Card>
             <Card>
                 <CardHeader>
                     <p style={{ fontWeight: 'bold' }} className="text-bold text-black">
-                        Story:
+                        {t('story')}
                     </p>
                 </CardHeader>
                 <Divider />
                 <CardBody>
-                    <p className="text-black">{story}</p>
+                    <Textarea name="story" defaultValue={story} className="text-black" />
                 </CardBody>
             </Card>
         </div>

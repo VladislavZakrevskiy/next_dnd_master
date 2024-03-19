@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { GPTDescription } from '../model/types/gptDescription'
 import { Card, CardBody } from '@nextui-org/card'
+import { useTranslations } from 'next-intl'
+import { Input } from '@nextui-org/react'
 
 interface HeroExtraDescProps {
     gptDescription: GPTDescription
@@ -8,45 +10,59 @@ interface HeroExtraDescProps {
 
 export const HeroExtraDesc: FC<HeroExtraDescProps> = ({ gptDescription }) => {
     const { skills, item } = gptDescription
+    const t = useTranslations('hero')
 
     return (
         <div className="flex flex-col gap-4">
             <div>
                 <p style={{ fontWeight: 'bold' }} className="font-bold text-black text-xl">
-                    Item in inventory:
+                    {t('items')}
                 </p>
                 {item.map((value, i) => (
-                    <Card key={'item-' + i} style={{ margin: 10 }}>
+                    <Card key={'item-' + i + 10} style={{ margin: 10 }}>
                         <CardBody className="gap-1">
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Name:
+                                    {t('name')}
                                 </p>
-                                <p className="flex gap-8">{value.name}</p>
+                                <Input className="flex gap-8" name={`item-name-${i}`} defaultValue={value.name} />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Description:
+                                    {t('description')}
                                 </p>
-                                <p className="flex gap-8">{value.description}</p>
+                                <Input
+                                    className="flex gap-8"
+                                    name={`item-description-${i}`}
+                                    defaultValue={value.description}
+                                />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Using:
+                                    {t('using')}
                                 </p>
-                                <p className="flex gap-8">{value.using}</p>
+                                <Input className="flex gap-8" name={`item-using-${i}`} defaultValue={value.using} />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Damage:
+                                    {t('damage')}
                                 </p>
-                                <p className="flex gap-8">{value.damage}</p>
+                                <Input
+                                    className="flex gap-8"
+                                    name={`item-damage-${i}`}
+                                    defaultValue={String(value.damage)}
+                                />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Durability:
+                                    {t('durability')}
                                 </p>
-                                <p className="flex gap-8">{value.durability}</p>
+                                <Input
+                                    fullWidth
+                                    className="flex gap-8"
+                                    name={`item-durability-${i}`}
+                                    defaultValue={String(value.durability)}
+                                />
                             </div>
                         </CardBody>
                     </Card>
@@ -54,40 +70,52 @@ export const HeroExtraDesc: FC<HeroExtraDescProps> = ({ gptDescription }) => {
             </div>
             <div>
                 <p style={{ fontWeight: 'bold' }} className="text-bold text-black text-xl">
-                    Skills in inventory:
+                    {t('skills')}
                 </p>
                 {skills.map((value, i) => (
-                    <Card key={'skill-' + i} style={{ margin: 10 }}>
+                    <Card key={'skill-' + i + 10} style={{ margin: 10 }}>
                         <CardBody className="gap-1">
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Name:
+                                    {t('name')}
                                 </p>
-                                <p className="flex gap-8">{value.name}</p>
+                                <Input className="flex gap-8" name={`skills-name-${i}`} defaultValue={value.name} />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Description:
+                                    {t('description')}
                                 </p>
-                                <p className="flex gap-8">{value.description}</p>
+                                <Input
+                                    className="flex gap-8 "
+                                    name={`skills-description-${i}`}
+                                    defaultValue={value.description}
+                                />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Using:
+                                    {t('using')}
                                 </p>
-                                <p className="flex gap-8">{value.using}</p>
+                                <Input className="flex gap-8" name={`skills-using-${i}`} defaultValue={value.using} />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Damage:
+                                    {t('damage')}
                                 </p>
-                                <p className="flex gap-8">{value.damage}</p>
+                                <Input
+                                    className="flex gap-8"
+                                    name={`skills-damage-${i}`}
+                                    defaultValue={String(value.damage)}
+                                />
                             </div>
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 item-center">
                                 <p style={{ fontWeight: 'bold' }} className="font-bold">
-                                    Durability:
+                                    {t('durability')}
                                 </p>
-                                <p className="flex gap-8">{value.numberOfUsing}</p>
+                                <Input
+                                    className="flex gap-8"
+                                    name={`skills-numberOfUsing-${i}`}
+                                    defaultValue={String(value.numberOfUsing)}
+                                />
                             </div>
                         </CardBody>
                     </Card>

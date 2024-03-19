@@ -1,9 +1,10 @@
-import { auth } from '@/app/auth'
+import { auth } from '@/app/[locale]/auth'
 import { Avatar } from '@nextui-org/avatar'
 import Image from 'next/image'
 import Link from 'next/link'
-import Icon from '@/app/icon.ico'
 import { SignIn, SignOut } from '@/entities/Auth'
+import Icon from '@/app/[locale]/icon.ico'
+import { LanguageSwitcher } from '@/entities/Switchers'
 
 export const Header = async () => {
     const sessionData = await auth()
@@ -16,6 +17,7 @@ export const Header = async () => {
             </Link>
             {sessionData ? (
                 <div className="flex justify-center items-center gap-4">
+                    <LanguageSwitcher />
                     <Avatar
                         size="lg"
                         src={sessionData.user?.image || undefined}

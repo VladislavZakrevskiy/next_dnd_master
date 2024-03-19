@@ -1,7 +1,9 @@
-import { signOut } from '@/app/auth'
+import { signOut } from '@/app/[locale]/auth'
 import { Button } from '@nextui-org/button'
+import { useTranslations } from 'next-intl'
 
 export function SignOut() {
+    const t = useTranslations('auth')
     return (
         <form
             action={async () => {
@@ -10,7 +12,7 @@ export function SignOut() {
             }}
         >
             <Button variant="ghost" color="primary" type="submit">
-                Sign Out
+                {t('sign out')}
             </Button>
         </form>
     )

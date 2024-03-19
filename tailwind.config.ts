@@ -6,7 +6,14 @@ const config: Config = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
         './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
     ],
-    theme: {},
+    theme: {
+        extend: {
+            fontFamily: {
+                roboto: ['var(--font-roboto)'],
+                mookmania: ['var(--font-mookmania)'],
+            },
+        },
+    },
     darkMode: 'class',
     plugins: [nextui()],
 }
