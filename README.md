@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ДНД Конструктор 
 
-## Getting Started
+## Идея
 
-First, run the development server:
+Занимаюсь веб разработкой 1.5 года, поэтому хотелось бы продолжить профессиональное обучение в одном из лучших мест в стране - моя мотивация для поступления и некий бэкграунд
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Проблема проекта - мы с друзьями любим играть в ДНД - ролевая игра. Но у нас были большие трудности в придумывании разнообразных персонажей, не хотелось брать банальных орка-воина, человека-мага огня, полурослика-плута, хотелось добавить элемент хаоса игру. Тогда было принято решение разработать сервис по AI придумыванию персонажей. Чтобы получить персонажа, надо внести расу и класс, желательно говорящие, также можно добавить "характер" предметов, умений, предыстории и т.д. для более четкого ТЗ модели. В качестве модели я использовал ChatGPT3.5 - OpenAI как известно дает лимит на использование своей модели, нам этого хватило и хватает до сих пор
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Весь сервис написан на Next 14, Auth с помощью NextAuth только через OAuth от Google, Yandex, VK, Discord, GitHub. Есть экспорт персонажа в pdf формате, чтобы печатать карту персонажа ( библиотека html2pdf.js )
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Общий процесс создания персонажа - 5-10 минут. Раньше только 5-10 в лучшем случае уходила на предысторию, и мы мало что успевали, если заранее не позаботились о них, а это случалось редко
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Считаю это прям продуктом, в теории, его даже можно было бы вывести, но у меня , к сожалению, для такого дела нет компетенций, зато в разработке есть
 
-## Learn More
+## Моя роль 
 
-To learn more about Next.js, take a look at the following resources:
+FullStack Developer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Что делал конкретно в проекте, более подробно про роль
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Все - ТЗ в Notion, План действий в Asana, Разработка на Next 14, Деплой на Vercel (из-за деплоя на бесплатных серверах Vercel часто случаются ошибки, так как время ожидания запроса сервером >10 секунд - это решаемо, если много раз отправлять запрос, рано или поздно запрос будет <10 секунд, в dev режиме все стабильно) 
 
-## Deploy on Vercel
+## Перспективы этого проекта
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Сейчас я бы к себе взял junior+/pre-middle бэка - такие есть в моем окружении, чтобы из этого сделать сервис персонажей ДНД, где коммьюнити могло бы делиться идеями. Игроки - моментами, лайфхаками, историями. Мастера - сценариями, лайфхаками, своим опытом. Была некая платформа по ДНД - современный формат форумов из 00х, но с уровнем продукта 2024 года
